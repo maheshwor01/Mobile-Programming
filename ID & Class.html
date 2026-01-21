@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Container Structure</title>
+    <style>
+        #main-container {
+            width: 100%;
+            padding: 20px;
+            border: 2px solid #ddff00;
+        }
+
+         .sub-container {
+            padding: 12px;
+            margin-bottom: 8px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Unique colors for ID-based containers */
+        #container-1 { background-color: #e74c3c; } /* red */
+        #container-2 { background-color: #3498db; } /* blue */
+        #container-3 { background-color: #2ecc71; } /* green */
+        #container-4 { background-color: #f1c40f; } /* yellow */
+        #container-5 { background-color: #9b59b6; } /* purple */
+        #container-6 { background-color: #e67e22; } /* orange */
+        #container-7 { background-color: #1abc9c; } /* teal */
+        #container-8 { background-color: #34495e; } /* dark blue */
+
+        /* Shared class styling */
+        .shared-container {
+            background-color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-container">
+<h1 style="text-align: center;">8 ID & 2 Class</h1>
+        <div id="container-1" class="sub-container">Sub Container 1</div>
+        <div id="container-2" class="sub-container">Sub Container 2</div>
+        <div id="container-3" class="sub-container">Sub Container 3</div>
+        <div id="container-4" class="sub-container">Sub Container 4</div>
+        <div id="container-5" class="sub-container">Sub Container 5</div>
+        <div id="container-6" class="sub-container">Sub Container 6</div>
+        <div id="container-7" class="sub-container">Sub Container 7</div>
+        <div id="container-8" class="sub-container">Sub Container 8</div>
+
+        <div class="sub-container shared-container">Shared Sub Container A</div>
+        <div class="sub-container shared-container">Shared Sub Container B</div>
+
+    </div>
+
+</body>
+</html>
