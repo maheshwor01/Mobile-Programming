@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grade Sheet</h1>
+        <label for="Math">math:</label>
+        <input type="text" id="Math" name="Math">
+        <label for="Science">science:</label>
+        <input type="text" id="Science" name="Science">
+        <label for="English">english:</label>
+        <input type="text" id="English" name="English">
+        <label for="History">history:</label>
+        <input type="text" id="History" name="History">
+        <label for="Physical Education">physical education:</label>
+        <input type="text" id="Physical Education" name="Physical Education">
+        <label for="Art">art:</label>
+        <input type="text" id="Art" name="Art">
+        <label for="computer science">computer science :</label>
+        <input type="text" id="computer science" name="computer science">
+        <label for="Biology">biology:</label>
+        <input type="text" id="Biology" name="Biology">
+
+        <div id="result"></div>
+
+        <br>
+        <button type="submit" onclick="submitgrades()"> Submit Grades</button>
+        <br>
+
+        <script>
+            function submitgrades() {
+                let math = document.getElementById("Math").value;
+                let science = document.getElementById("Science").value;
+                let english = document.getElementById("English").value;
+                let history = document.getElementById("History").value;
+                let physicalEducation = document.getElementById("Physical Education").value;
+                let art = document.getElementById("Art").value;
+                let computerScience = document.getElementById("computer science").value;
+                let biology = document.getElementById("Biology").value;
+
+                let totalmarks=(math) + (science) + (english) + (history) + (physicalEducation) + (art) + (computerScience) + (biology);
+                if(totalmarks > 700 ){
+                    document.getElementById("result").innerHTML = "grades=" + "distinction";
+                    document.getElementById("result").style.color = "green";
+                } else if(totalmarks > 600 ){
+                    document.getElementById("result").innerHTML = "grades=" + "first division";
+                    document.getElementById("result").style.color = "blue";
+                } else if(totalmarks > 500 ){
+                    document.getElementById("result").innerHTML = "grades=" + "second division";
+                    document.getElementById("result").style.color = "orange";
+                } else {
+                    document.getElementById("result").innerHTML = "grades=" + "fail";
+                    document.getElementById("result").style.color = "red";
+
+                }
+
+            }
+        </script>      
+    
+</body>
+</html>

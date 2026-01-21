@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Toggle Light</h2>
+
+<button id="btn" onclick="toggleLight()">Turn ON</button>
+<br><br>
+
+<img id="myImage"
+     src="https://www.w3schools.com/js/pic_bulboff.gif"
+     style="width:120px">
+
+<script>
+let lightOn = false;
+
+function toggleLight() {
+  let img = document.getElementById("myImage");
+  let btn = document.getElementById("btn");
+
+  if (lightOn) {
+    img.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+    btn.innerHTML = "Turn ON";
+    lightOn = false;
+  } else {
+    img.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+    btn.innerHTML = "Turn OFF";
+    lightOn = true;
+  }
+}
+</script>
+
+</body>
+</html>
