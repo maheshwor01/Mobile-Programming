@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J Query</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#container1").on({
+                click: function () {
+                    $(this).css("background-color", "yellow")
+                        .css("border", "5px solid red")
+                        .css("height", "150px")
+                        .css("width", "75%");
+                },
+                dblclick: function () {
+                    $(this).css("background-color", "lightblue")
+                        .css("border", "2px solid black")
+                        .css("height", "150px")
+                        .css("width", "50%");
+                },
+            });
+
+            $("#container2").on({
+                click: function () {
+                    $(this).css("background-color", "orange")
+                        .css("border", "5px solid purple")
+                        .css("height", "150px")
+                        .css("width", "75%");
+                },
+                dblclick: function () {
+                    $(this).css("background-color", "lightgreen")
+                        .css("border", "2px solid black")
+                        .css("height", "150px")
+                        .css("width", "50%");
+                }
+            });
+
+            $("#container3").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "pink")
+                        .css("border", "5px solid blue")
+                        .css("height", "150px")
+                        .css("width", "75%");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "lightcoral")
+                        .css("border", "2px solid black")
+                        .css("height", "150px")
+                        .css("width", "50%");
+                },
+            });
+
+            $("#container4").mousemove(function () {
+                $(this).css("background-color", "lightgray")
+                    .css("border", "5px solid green")
+                    .css("height", "150px")
+                    .css("width", "75%");
+            }).mouseleave(function () {
+                $(this).css("background-color", "lightgoldenrodyellow")
+                    .css("border", "2px solid black")
+                    .css("height", "150px")
+                    .css("width", "50%");
+            });
+        });
+    </script>
+
+    <style>
+        #container1,
+        #container2,
+        #container3,
+        #container4 {
+            margin: 20px;
+            border: 2px solid black;
+        }
+
+        #container1 {
+            background-color: lightblue;
+        }
+
+        #container2 {
+            background-color: lightgreen;
+        }
+
+        #container3 {
+            background-color: lightcoral;
+        }
+
+        #container4 {
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container1">
+
+    </div>
+    <div id="container2">
+
+    </div>
+    <div id="container3">
+
+    </div>
+    <div id="container4">
+
+    </div>
+
+</body>
+
+</html>
