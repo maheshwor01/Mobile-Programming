@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Shuffle Animation</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .container {
+            position: relative;
+            width: 520px;
+            height: 120px;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #000;
+            background-color: rgb(184, 209, 228);
+        }
+
+        .box h1 {
+            margin: 0;
+            line-height: 100px;
+            text-align: center;
+            color: white;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            // Select all boxes
+            let box1 = $("#box1");
+            let box2 = $("#box2");
+            let box3 = $("#box3");
+            let box4 = $("#box4");
+
+            // Set initial positions
+            box1.css("left", "0px");
+            box2.css("left", "120px");
+            box3.css("left", "240px");
+            box4.css("left", "360px");
+
+            $("#animateBtn").click(function () {
+
+                // Get current positions
+                let pos1 = box1.position().left;
+                let pos2 = box2.position().left;
+                let pos3 = box3.position().left;
+                let pos4 = box4.position().left;
+
+                // Animate boxes (shuffle)
+                box1.css("background", "orange")
+                    .animate({ left: pos2, opacity: 0.6 }, 1000)
+                    .animate({ opacity: 1 }, 200);
+
+                box2.css("background", "lightseagreen")
+                    .animate({ left: pos3, opacity: 0.6 }, 1000)
+                    .animate({ opacity: 1 }, 200);
+
+                box3.css("background", "blue")
+                    .animate({ left: pos4, opacity: 0.6 }, 1000)
+                    .animate({ opacity: 1 }, 200);
+
+                box4.css("background", "green")
+                    .animate({ left: pos1, opacity: 0.6 }, 1000)
+                    .animate({ opacity: 1 }, 200);
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box" id="box1"><h1>1</h1></div>
+        <div class="box" id="box2"><h1>2</h1></div>
+        <div class="box" id="box3"><h1>3</h1></div>
+        <div class="box" id="box4"><h1>4</h1></div>
+    </div>
+
+    <button id="animateBtn">Start Shuffle</button>
+
+</body>
+</html>
