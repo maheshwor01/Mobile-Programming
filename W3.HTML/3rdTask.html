@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+}
+
+/* default: 1 column */
+#container img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+}
+
+/* 2 columns */
+@media screen and (min-width: 480px) {
+    #container img {
+        width: calc(50% - 2px)
+    }
+}
+
+/* 4 columns */
+@media screen and (min-width: 760px) {
+    #container img {
+        width: calc(25% - 2px)
+    }
+}
+</style>
+</head>
+
+<body>
+    <h1>Welcome to the Web Page</h1>
+    <p>Media queries example</p>
+    <div id="container">
+        <img src="https://pixabay.com/photos/tree-field-sunset-clouds-sky-736875/" alt="Image 1">
+        <img src="https://pixabay.com/photos/mountains-nature-sky-clouds-690293/" alt="Image 2">
+        <img src="  https://pixabay.com/photos/road-trees-nature-sky-clouds-544282/" alt="Image 3">
+        <img src="https://pixabay.com/photos/lake-mountains-nature-sky/" alt="Image 4">
+        <img src="https://pixabay.com/photos/moon-full-moon-sea-sky-night-sky-2762111/" alt="Image 5">
+        <img src="https://pixabay.com/illustrations/girl-backpack-night-surreal-sky-8257551/" alt="Image 6">
+        <img src="https://pixabay.com/photos/forest-trees-fog-mystical-nature-690293/" alt="Image 7">
+        <img src="https://pixabay.com/photos/sunset-dawn-sky-clouds-nature-690293/" alt="Image 8">
+        <img src="https://pixabay.com/photos/mountains-lake-nature-sky-clouds-690293/" alt="Image 9">
+        <img src="https://pixabay.com/photos/river-forest-nature-trees-water-690293/" alt="Image 10">
+    </div>
+</body>
+</html>
