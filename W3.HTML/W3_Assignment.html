@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Mobile Web Page</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 15px;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        #message {
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Mobile Web Page using jQuery</h2>
+    <p>Click the button to see jQuery in action.</p>
+
+    <button id="showBtn">Click Me</button>
+
+    <div id="message">Hello! This message is shown using jQuery.</div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#showBtn").click(function () {
+            $("#message").slideToggle();
+        });
+    });
+</script>
+
+</body>
+</html>
